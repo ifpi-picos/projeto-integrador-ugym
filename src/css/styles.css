@@ -24,17 +24,13 @@ hr{
 }
 
 /* Estilos do Conteúdo Principal */
-main {
-    padding: 20px;
-    z-index: 1;
-    padding-left: calc(82px + 20px);
-}
+
 
 /* Estilizando o span dentro da tag h1 em main */
 header{
     display: flex;
     font-size: 1.3rem;
-    margin-left: 8px;
+    margin-left: 120px;
 }
 header h1 span {
     color: red;
@@ -84,11 +80,13 @@ header h1 span {
     outline: none;
     padding-left: 40px;
     transition: all 0.7s;
+    border: solid 1px red;
 }
 
 .search-input:focus {
     width: 250px;
     box-shadow: 2px 2px 5px #777;
+    border: solid 1px red;
 }
 
 .search-input:valid {
@@ -271,7 +269,8 @@ header h1 span {
 
 /* Estilizando a seção do slider */
 section.slider {
-    width: 100%;
+    margin-left: 9%;
+    width: 90%;
     height: auto;
     padding: 0 !important;
     overflow: hidden;
@@ -345,7 +344,11 @@ section.slider {
 #radio1:checked ~ .nav-auto .auto-btn1,
 #radio2:checked ~ .nav-auto .auto-btn2,
 #radio3:checked ~ .nav-auto .auto-btn3 {
+    
     background-color: red;
+}
+.auto-btn1, .auto-btn2, .auto-btn3, .manual-btn{
+    margin-right: 10%;
 }
 
 /* Estilizando o primeiro slide quando o radio1 está marcado */
@@ -362,7 +365,9 @@ section.slider {
 #radio3:checked ~ .primeiro {
     margin-left: -50%;
 }
-
+.services{
+    padding-left: 6%;
+}
 .services h2{
     text-align: center;
     margin-top: 10%;
@@ -383,10 +388,9 @@ section.slider {
 }
 .feature{
     border-radius: 29px 29px 141px 29px;
-    -webkit-border-radius: 29px 29px 141px 29px;
-    -moz-border-radius: 29px 29px 141px 29px;
+    -webkit-border-radius: 29px 29px 141px 19px;
+    -moz-border-radius: 29px 29px 141px 19px;
     border: 3px solid #ff0000;
-
     height: 80px;
     width: 80px;
 }
@@ -409,6 +413,95 @@ section.slider {
     transition: 1.3s;
 }
 
+.navegacao{
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    display: none;
+}
+
+.navegacao ul{
+    width: 350px;
+    display: flex;
+}
+
+.navegacao ul li{
+    width: 70px;
+    height: 70px;
+    list-style-type: none;
+    position: relative;
+    z-index: 1;
+}
+
+.navegacao ul li a{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-decoration: none;
+    position: relative;
+}
+
+.navegacao ul li a .icone{
+    display: block;
+    line-height: 75px;
+    font-size: 20px;
+    color: #282828;
+    position: relative;
+    transition: .5s;
+}
+
+.navegacao ul li a .texto{
+    color: #282828;
+    position: absolute;
+    opacity: 0;
+    transition: .5s;
+    transform: translateY(20px);
+}
+
+.navegacao ul li.ativo a .icone{
+    transform: translateY(-35px);
+    color: red;
+}
+
+.navegacao ul li.ativo a .texto{
+    opacity: 1;
+    transform: translateY(10px);
+}
+
+.indicador{
+    width: 70px;
+    height: 70px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: -50%;
+    transition: .5s;
+}
+
+.navegacao ul li:nth-child(1).ativo ~ .indicador{
+    transform: translateX(calc(70px * 0));
+}
+.navegacao ul li:nth-child(2).ativo ~ .indicador{
+    transform: translateX(calc(70px * 1));
+}
+.navegacao ul li:nth-child(3).ativo ~ .indicador{
+    transform: translateX(calc(70px * 2));
+}
+.navegacao ul li:nth-child(4).ativo ~ .indicador{
+    transform: translateX(calc(70px * 3));
+}
+.navegacao ul li:nth-child(5).ativo ~ .indicador{
+    transform: translateX(calc(70px * 4));
+}
+
+
 
 /* Media query para telas com largura máxima de 900px */
 @media screen and (max-width: 900px) {
@@ -426,15 +519,32 @@ section.slider {
     .img-mobile {
         display: block;
     }
+    section.slider {
+        margin-left: 5%;
+    }
+    .main {
+        padding: 20px;
+        z-index: 1;
+        padding-left: calc(82px + 20px);
 
+    }
+    header{
+        margin-left: 25px;
+    }
     /* Ajustando a margem superior para os botões de navegação */
     .nav-auto,
     .nav-manual {
-        margin-top: 50%;
+        margin-top: 60%;
+        
     }
-    .services h2{
+    .auto-btn3, .auto-btn2, .auto-btn1, .manual-btn{
+        margin-right: 5%;
+    }
+    .services h2 {
         margin-top: 20%;
+        text-align: center;
     }
+    
     .features {
         display: flex; /* Exibe os itens em linha */
         flex-wrap: wrap; /* Permite que os itens sejam quebrados em várias linhas */
@@ -453,5 +563,18 @@ section.slider {
     .search-input:focus {
         width: 200px;
         box-shadow: 2px 2px 5px #777;
+    }
+    #sidebar{
+        display: none;
+    }
+    .navegacao{
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        width: 100%; /* Para garantir que a navegação ocupe toda a largura da tela */
+        background-color: #fff; /* Adicione um fundo para garantir que o conteúdo abaixo não seja visível */
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Opcional: Adicione uma sombra para destacar a navegação */
+        z-index: 1000; /* Para garantir que a navegação fique acima de outros elementos */
+        
     }
 }
