@@ -1,0 +1,457 @@
+/* Importando Fontes do Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Estilos do Corpo */
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: gray;
+    overflow-x: hidden;
+}
+hr{
+    border: 1px solid black;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 1%;
+}
+
+/* Estilos do Conteúdo Principal */
+main {
+    padding: 20px;
+    z-index: 1;
+    padding-left: calc(82px + 20px);
+}
+
+/* Estilizando o span dentro da tag h1 em main */
+header{
+    display: flex;
+    font-size: 1.3rem;
+    margin-left: 8px;
+}
+header h1 span {
+    color: red;
+}
+
+/*search css*/
+.search-container {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin-top: 1%;
+    margin-left: 2%;
+}
+
+.search-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.search-icon::before {
+    content: '';
+    width: 25%;
+    height: 25%;
+    border-radius: 50%;
+    border: 2px solid red;
+}
+
+.search-icon::after {
+    content: '';
+    width: 20%;
+    height: 2px;
+    background-color: red;
+}
+
+.search-input {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    padding-left: 40px;
+    transition: all 0.7s;
+}
+
+.search-input:focus {
+    width: 250px;
+    box-shadow: 2px 2px 5px #777;
+}
+
+.search-input:valid {
+    width: 250px;
+}
+
+/* Estilos da Barra Lateral */
+#sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #ffffff;
+    height: 100vh;
+    border-radius: 0px 18px 18px 0px;
+    position: fixed;
+    transition: all .5s;
+    min-width: 82px;
+    z-index: 2;
+}
+
+/* Estilizando o conteúdo dentro da barra lateral */
+#sidebar_content {
+    padding: 12px;
+}
+
+/* Estilizando a seção do usuário na barra lateral */
+#user {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+/* Estilizando o avatar do usuário */
+#user_avatar {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* Estilizando as informações do usuário */
+#user_infos {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilizando o último span dentro de user_infos */
+#user_infos span:last-child {
+    color: #6b6b6b;
+    font-size: 12px;
+}
+
+/* Estilizando os itens laterais na barra lateral */
+#side_items {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style: none;
+}
+
+/* Estilizando cada item lateral */
+.side-item {
+    border-radius: 8px;
+    padding: 14px;
+    cursor: pointer;
+}
+.side-item i{
+    font-size: 30px;
+}
+
+/* Estilizando o item lateral ativo */
+.side-item.active {
+    background-color: #e3e9f7;
+}
+
+/* Estilizando o efeito de hover nos itens laterais e no botão de logout */
+.side-item:hover:not(.active),
+#logout_btn:hover {
+    background-color: #e3e9f7;
+}
+
+/* Estilizando a tag âncora dentro dos itens laterais */
+.side-item a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0a0a0a;
+}
+
+/* Estilizando a tag âncora ativa dentro dos itens laterais */
+.side-item.active a {
+    color: #e3e9f7;
+}
+
+/* Estilizando o ícone dentro da tag âncora */
+.side-item a i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+}
+
+/* Estilizando a seção de logout na barra lateral */
+#logout {
+    border-top: 1px solid #e3e9f7;
+    padding: 12px;
+}
+
+#logout i{
+    font-size: 30px;
+}
+/* Estilizando o botão de logout */
+#logout_btn {
+    border: none;
+    padding: 12px;
+    font-size: 14px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border-radius: 8px;
+    text-align: start;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+/* Estilizando o botão de abrir */
+#open_btn {
+    position: absolute;
+    top: 30px;
+    right: -10px;
+    background-color: red;
+    color: #e3e9f7;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilizando o ícone dentro do botão de abrir */
+#open_btn_icon {
+    transition: transform .3s ease;
+}
+
+/* Estilizando o botão de abrir quando a barra lateral está aberta */
+.open-sidebar #open_btn_icon {
+    transform: rotate(180deg);
+}
+
+/* Estilizando a descrição do item */
+.item-description {
+    width: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    transition: width .6s;
+    height: 0px;
+}
+
+/* Estilizando a barra lateral quando está aberta */
+#sidebar.open-sidebar {
+    min-width: 15%;
+}
+
+/* Estilizando a descrição do item quando a barra lateral está aberta */
+#sidebar.open-sidebar .item-description {
+    width: 150px;
+    height: auto;
+}
+
+/* Estilizando a tag âncora dentro dos itens laterais quando a barra lateral está aberta */
+#sidebar.open-sidebar .side-item a {
+    justify-content: flex-start;
+    gap: 14px;
+}
+
+/* Estilizando a seção do slider */
+section.slider {
+    width: 100%;
+    height: auto;
+    padding: 0 !important;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.img-desktop, .img-mobile {
+    width: 100%;
+    height: auto;
+}
+
+/* Estilizando o conteúdo do slider */
+.slider-content {
+    width: 400%;
+    height: auto;
+    display: flex;
+    
+}
+
+/* Estilizando o input e a imagem móvel no slider */
+.slider-content input,
+.img-mobile {
+    display: none;
+}
+
+/* Estilizando cada caixa de slide no slider */
+.slide-box {
+    width: 25%;
+    height: auto;
+    position: relative;
+    text-align: center;
+    transition: 1s;
+}
+
+/* Estilizando a imagem dentro da caixa de slide */
+.slide-box img {
+    width: 100%;
+}
+
+/* Estilizando os botões de navegação manual e automática */
+.nav-manual,
+.nav-auto {
+    position: absolute;
+    width: 100%;
+    margin-top: 35%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilizando os botões de navegação manual e os pontos de navegação automática */
+.nav-manual .manual-btn,
+.nav-auto div {
+    border: 1px solid red;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* Estilizando os botões de navegação manual e os pontos de navegação automática, exceto o último */
+.nav-manual .manual-btn:not(:last-child),
+.nav-auto div:not(:last-child) {
+    margin-right: 10px;
+}
+
+/* Estilizando o efeito de hover nos botões de navegação manual */
+.nav-manual .manual-btn:hover {
+    background-color: red;
+}
+
+/* Estilizando o ponto de navegação automática ativo */
+#radio1:checked ~ .nav-auto .auto-btn1,
+#radio2:checked ~ .nav-auto .auto-btn2,
+#radio3:checked ~ .nav-auto .auto-btn3 {
+    background-color: red;
+}
+
+/* Estilizando o primeiro slide quando o radio1 está marcado */
+#radio1:checked ~ .primeiro {
+    margin-left: 0%;
+}
+
+/* Estilizando o primeiro slide quando o radio2 está marcado */
+#radio2:checked ~ .primeiro {
+    margin-left: -25%;
+}
+
+/* Estilizando o primeiro slide quando o radio3 está marcado */
+#radio3:checked ~ .primeiro {
+    margin-left: -50%;
+}
+
+.services h2{
+    text-align: center;
+    margin-top: 10%;
+    margin-left: 5%;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+}
+.services h2 span{
+    color: red;
+}
+.features{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 3%;
+    flex-wrap: wrap;
+    
+}
+.feature{
+    border-radius: 29px 29px 141px 29px;
+    -webkit-border-radius: 29px 29px 141px 29px;
+    -moz-border-radius: 29px 29px 141px 29px;
+    border: 3px solid #ff0000;
+
+    height: 80px;
+    width: 80px;
+}
+.feature i{
+    width: 50px;
+    height: 50px;
+    margin-top: 25%;
+    margin-left: 15%;
+    font-size: 35px;
+    color: black;
+}
+.feature:hover{
+    background-color: #ff0000;
+    color: white;
+    transition: 1s;
+}
+
+.feature i:hover{
+    color: white;
+    transition: 1.3s;
+}
+
+
+/* Media query para telas com largura máxima de 900px */
+@media screen and (max-width: 900px) {
+    /* Ocultando a imagem de desktop */
+    #sidebar {
+        min-height: 100vh; /* Altura mínima de 100vh */
+        height: 100%; /* Altura total permitida */
+        
+    }
+    .img-desktop {
+        display: none;
+    }
+
+    /* Exibindo a imagem móvel */
+    .img-mobile {
+        display: block;
+    }
+
+    /* Ajustando a margem superior para os botões de navegação */
+    .nav-auto,
+    .nav-manual {
+        margin-top: 50%;
+    }
+    .services h2{
+        margin-top: 20%;
+    }
+    .features {
+        display: flex; /* Exibe os itens em linha */
+        flex-wrap: wrap; /* Permite que os itens sejam quebrados em várias linhas */
+        justify-content: flex-start; /* Alinha os itens ao início da linha */
+        gap: 10px; /* Espaçamento entre os itens */
+    }
+
+    .feature{
+        width: 22%; /* Aproximadamente 1/4 da largura do contêiner, com margem para espaçamento */
+        margin-bottom: 10px; /* Espaçamento inferior entre os itens */
+    }
+    .search-container {
+        margin-top: 2.7%;
+        margin-left: 2%;
+    }
+    .search-input:focus {
+        width: 200px;
+        box-shadow: 2px 2px 5px #777;
+    }
+}
