@@ -31,6 +31,7 @@ hr{
     display: flex;
     font-size: 1.3rem;
     margin-left: 120px;
+    width: 100%;
 }
 .homeheader h1 span {
     color: red;
@@ -388,20 +389,21 @@ section.slider {
     
 }
 .feature{
-    border-radius: 29px 29px 141px 29px;
-    -webkit-border-radius: 29px 29px 141px 19px;
-    -moz-border-radius: 29px 29px 141px 19px;
+    display: flex;
+    border-radius: 30px;
     border: 3px solid #ff0000;
-    height: 80px;
-    width: 80px;
+    height: 100px;
+    width: 90px;
+    justify-content: center;
+    align-items: center;
 }
+
 .feature i{
-    width: 50px;
-    height: 50px;
-    margin-top: 25%;
-    margin-left: 15%;
-    font-size: 35px;
+    font-size: 40px;
     color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .feature:hover{
     background-color: #ff0000;
@@ -531,6 +533,10 @@ section.slider {
     }
     .homeheader{
         margin-left: 25px;
+    }
+    .homebody{
+        overflow-x:hidden;
+        
     }
     /* Ajustando a margem superior para os botões de navegação */
     .nav-auto,
