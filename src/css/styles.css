@@ -507,13 +507,8 @@ section.slider {
 
 
 /* Media query para telas com largura máxima de 900px */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 576px) {
     /* Ocultando a imagem de desktop */
-    #sidebar {
-        min-height: 100vh; /* Altura mínima de 100vh */
-        height: 100%; /* Altura total permitida */
-        
-    }
     .img-desktop {
         display: none;
     }
@@ -535,7 +530,7 @@ section.slider {
         margin-left: 25px;
     }
     .homebody{
-        overflow-x:hidden;
+        max-height: 100vh;
         
     }
     /* Ajustando a margem superior para os botões de navegação */
