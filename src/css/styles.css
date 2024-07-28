@@ -12,6 +12,7 @@
 /* Estilos do Corpo */
 .homebody {
     display: flex;
+    flex-direction: column;
     min-height: 100vh;
     background-color: whitesmoke;
     overflow-x: hidden;
