@@ -392,7 +392,7 @@ section.slider {
     display: flex;
     border-radius: 30px;
     border: 3px solid #ff0000;
-    height: 100px;
+    height: 90px;
     width: 90px;
     justify-content: center;
     align-items: center;
