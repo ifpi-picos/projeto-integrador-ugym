@@ -10,7 +10,7 @@
 }
 
 /* Estilos do Corpo */
-body {
+.homebody {
     display: flex;
     min-height: 100vh;
     background-color: whitesmoke;
@@ -27,12 +27,12 @@ hr{
 
 
 /* Estilizando o span dentro da tag h1 em main */
-header{
+.homeheader{
     display: flex;
     font-size: 1.3rem;
     margin-left: 120px;
 }
-header h1 span {
+.homeheader h1 span {
     color: red;
 }
 
@@ -91,6 +91,7 @@ header h1 span {
 
 .search-input:valid {
     width: 250px;
+    
 }
 
 /* Estilos da Barra Lateral */
@@ -528,7 +529,7 @@ section.slider {
         padding-left: calc(82px + 20px);
 
     }
-    header{
+    .homeheader{
         margin-left: 25px;
     }
     /* Ajustando a margem superior para os botões de navegação */
@@ -577,4 +578,169 @@ section.slider {
         z-index: 1000; /* Para garantir que a navegação fique acima de outros elementos */
         
     }
+}
+
+
+
+/* CAD AND LOGIN!!!  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+}
+
+.logbody {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: whitesmoke;
+}
+
+.logheader{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.logcontainer {
+  background-color: bl;
+  padding: 6px;
+  width: 350px;
+  height: 470px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-top: 5%;
+
+}
+
+form {
+  position: absolute;
+  margin-top: 70px;
+  transition: .5s;
+  width: 300px;
+  height: 400px;
+}
+
+.buttonsForm {
+  margin-top: 30px;
+  position: relative;
+  border-radius: 30px;
+  
+}
+
+.buttonsForm button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  position: relative;
+  padding: 10px 29px;
+}
+
+.btnColor {
+  position: absolute;
+  width: 108px;
+  height: 100%;
+  background: linear-gradient(to right, red, #db5757);
+  border-radius: 30px;
+  transition: .3s;
+  
+}
+
+
+.logbody input[type="text"], .logbody input[type="password"] {
+  border: none;
+  margin-top: 40px;
+  border-radius: 60px;
+  padding: 8px 0 8px 35px;
+  outline: none;
+  width: 100%;
+}
+
+button[type="submit"] {
+  background: red;
+  color: white;
+  border-radius: 30px;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 8px 0 8px 15px;
+  font-size: 15px;
+  margin-top: 40px;
+  cursor: pointer;
+}
+
+.divCheck {
+  margin: 10px 0 0 5px;
+  width: 80%;
+  font-size: 13px;
+}
+
+#signin {
+  left: 25px;
+}
+
+#signup {
+  left: 450px;
+}
+
+
+.logbody i {
+    position: absolute;
+    left: 0;
+    padding: 10px 10px;
+}
+.iEmail {
+  top: 40px;
+}
+
+.iPassword {
+  top: 114px;
+}
+
+.iPassword2 {
+  top: 190px;
+}
+
+@media screen and (max-width: 900px) {
+  .logcontainer {
+    width: 300px;
+    height: 450px;
+  }
+  
+  form {
+    width: 250px;
+    height: 400px;
+  }
+  
+  .logbody input[type="text"], .logbody input[type="password"] {
+    padding: 8px 0 8px 30px;
+  }
+  
+  button[type="submit"] {
+    padding: 8px 0 8px 10px;
+  }
+  
+  .iEmail {
+    top: 40px;
+  }
+  
+  .iPassword {
+    top: 114px;
+  }
+  
+  .iPassword2 {
+    top: 190px;
+  }
 }
