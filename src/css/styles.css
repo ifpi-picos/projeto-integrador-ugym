@@ -26,8 +26,9 @@ hr{
 
 /* Estilos do Conteúdo Principal */
 
-
-/* Estilizando o span dentro da tag h1 em main */
+.main {
+    max-width: calc(100%-82px);
+}
 .homeheader{
     display: flex;
     font-size: 1.3rem;
@@ -650,11 +651,6 @@ button[type="submit"] {
     /* Exibindo a imagem móvel */
     .img-mobile {
         display: block;
-    }
-    .main {
-        padding: 20px;
-        z-index: 1;
-        padding-left: calc(82px + 20px);
     }
     section.slider {
         margin-left: auto;
