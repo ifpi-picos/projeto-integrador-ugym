@@ -506,81 +506,6 @@ section.slider {
 
 
 
-/* Media query para telas com largura máxima de 900px */
-@media screen and (max-width: 576px) {
-    /* Ocultando a imagem de desktop */
-    .img-desktop {
-        display: none;
-    }
-
-    /* Exibindo a imagem móvel */
-    .img-mobile {
-        display: block;
-    }
-    section.slider {
-        margin-left: 5%;
-    }
-    .main {
-        padding: 20px;
-        z-index: 1;
-        padding-left: calc(82px + 20px);
-
-    }
-    .homeheader{
-        margin-left: 25px;
-    }
-    .homebody{
-        max-height: 100vh;
-        
-    }
-    /* Ajustando a margem superior para os botões de navegação */
-    .nav-auto,
-    .nav-manual {
-        margin-top: 60%;
-        
-    }
-    .auto-btn3, .auto-btn2, .auto-btn1, .manual-btn{
-        margin-right: 5%;
-    }
-    .services h2 {
-        margin-top: 20%;
-        text-align: center;
-    }
-    
-    .features {
-        display: flex; /* Exibe os itens em linha */
-        flex-wrap: wrap; /* Permite que os itens sejam quebrados em várias linhas */
-        justify-content: flex-start; /* Alinha os itens ao início da linha */
-        gap: 10px; /* Espaçamento entre os itens */
-    }
-
-    .feature{
-        width: 22%; /* Aproximadamente 1/4 da largura do contêiner, com margem para espaçamento */
-        margin-bottom: 10px; /* Espaçamento inferior entre os itens */
-    }
-    .search-container {
-        margin-top: 2.7%;
-        margin-left: 2%;
-    }
-    .search-input:focus {
-        width: 200px;
-        box-shadow: 2px 2px 5px #777;
-    }
-    #sidebar{
-        display: none;
-    }
-    .navegacao{
-        display: flex;
-        position: fixed;
-        bottom: 0;
-        width: 100%; /* Para garantir que a navegação ocupe toda a largura da tela */
-        background-color: #fff; /* Adicione um fundo para garantir que o conteúdo abaixo não seja visível */
-        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Opcional: Adicione uma sombra para destacar a navegação */
-        z-index: 1000; /* Para garantir que a navegação fique acima de outros elementos */
-        
-    }
-}
-
 
 
 /* CAD AND LOGIN!!!  */
@@ -714,7 +639,79 @@ button[type="submit"] {
   top: 190px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 576px) {
+
+    /* Ocultando a imagem de desktop */
+    .img-desktop {
+        display: none;
+    }
+
+    /* Exibindo a imagem móvel */
+    .img-mobile {
+        display: block;
+    }
+    section.slider {
+        margin-left: 5%;
+    }
+    .main {
+        padding: 20px;
+        z-index: 1;
+        padding-left: calc(82px + 20px);
+
+    }
+    .homeheader{
+        margin-left: 25px;
+    }
+    .homebody{
+        max-height: 100vh;
+        
+    }
+    /* Ajustando a margem superior para os botões de navegação */
+    .nav-auto,
+    .nav-manual {
+        margin-top: 60%;
+        
+    }
+    .auto-btn3, .auto-btn2, .auto-btn1, .manual-btn{
+        margin-right: 5%;
+    }
+    .services h2 {
+        margin-top: 20%;
+        text-align: center;
+    }
+    
+    .features {
+        display: flex; /* Exibe os itens em linha */
+        flex-wrap: wrap; /* Permite que os itens sejam quebrados em várias linhas */
+        justify-content: flex-start; /* Alinha os itens ao início da linha */
+        gap: 10px; /* Espaçamento entre os itens */
+    }
+
+    .feature{
+        width: 22%; /* Aproximadamente 1/4 da largura do contêiner, com margem para espaçamento */
+        margin-bottom: 10px; /* Espaçamento inferior entre os itens */
+    }
+    .search-container {
+        margin-top: 2.7%;
+        margin-left: 2%;
+    }
+    .search-input:focus {
+        width: 200px;
+        box-shadow: 2px 2px 5px #777;
+    }
+    #sidebar{
+        display: none;
+    }
+    .navegacao{
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        width: 100%; /* Para garantir que a navegação ocupe toda a largura da tela */
+        background-color: #fff; /* Adicione um fundo para garantir que o conteúdo abaixo não seja visível */
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Opcional: Adicione uma sombra para destacar a navegação */
+        z-index: 1000; /* Para garantir que a navegação fique acima de outros elementos */
+        
+    }
   .logcontainer {
     width: 300px;
     height: 450px;
