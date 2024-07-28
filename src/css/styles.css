@@ -17,6 +17,7 @@
     background-color: whitesmoke;
     overflow-x: hidden;
 }
+
 hr{
     border: 1px solid black;
     width: 50%;
@@ -25,21 +26,22 @@ hr{
 }
 
 /* Estilos do Conteúdo Principal */
-
 .main {
-    max-width: calc(100%-82px);
+    max-width: calc(100% - 82px);
 }
+
 .homeheader{
     display: flex;
     font-size: 1.3rem;
     margin-left: 120px;
     width: 100%;
 }
+
 .homeheader h1 span {
     color: red;
 }
 
-/*search css*/
+/* Estilos da Barra de Pesquisa */
 .search-container {
     position: relative;
     width: 40px;
@@ -94,7 +96,6 @@ hr{
 
 .search-input:valid {
     width: 250px;
-    
 }
 
 /* Estilos da Barra Lateral */
@@ -158,6 +159,7 @@ hr{
     padding: 14px;
     cursor: pointer;
 }
+
 .side-item i{
     font-size: 30px;
 }
@@ -205,6 +207,7 @@ hr{
 #logout i{
     font-size: 30px;
 }
+
 /* Estilizando o botão de logout */
 #logout_btn {
     border: none;
@@ -280,6 +283,7 @@ section.slider {
     overflow: hidden;
     border-radius: 20px;
 }
+
 .img-desktop, .img-mobile {
     width: 100%;
     height: auto;
@@ -290,7 +294,6 @@ section.slider {
     width: 400%;
     height: auto;
     display: flex;
-    
 }
 
 /* Estilizando o input e a imagem móvel no slider */
@@ -348,9 +351,9 @@ section.slider {
 #radio1:checked ~ .nav-auto .auto-btn1,
 #radio2:checked ~ .nav-auto .auto-btn2,
 #radio3:checked ~ .nav-auto .auto-btn3 {
-    
     background-color: red;
 }
+
 .auto-btn1, .auto-btn2, .auto-btn3, .manual-btn{
     margin-right: 10%;
 }
@@ -369,9 +372,11 @@ section.slider {
 #radio3:checked ~ .primeiro {
     margin-left: -50%;
 }
+
 .services{
     padding-left: 6%;
 }
+
 .services h2{
     text-align: center;
     margin-top: 10%;
@@ -379,17 +384,19 @@ section.slider {
     color: black;
     font-family: 'Poppins', sans-serif;
 }
+
 .services h2 span{
     color: red;
 }
+
 .features{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     margin-top: 3%;
     flex-wrap: wrap;
-    
 }
+
 .feature{
     display: flex;
     border-radius: 30px;
@@ -407,6 +414,7 @@ section.slider {
     justify-content: center;
     align-items: center;
 }
+
 .feature:hover{
     background-color: #ff0000;
     color: white;
@@ -506,139 +514,123 @@ section.slider {
     transform: translateX(calc(70px * 4));
 }
 
-
-
-
-
 /* CAD AND LOGIN!!!  */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'poppins', sans-serif;
-}
-
 .logbody {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: whitesmoke;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: whitesmoke;
 }
 
 .logheader{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-
 .logcontainer {
-  background-color: bl;
-  padding: 6px;
-  width: 350px;
-  height: 470px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  margin-top: 5%;
-
+    background-color: bl;
+    padding: 6px;
+    width: 350px;
+    height: 470px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-top: 5%;
 }
 
 form {
-  position: absolute;
-  margin-top: 70px;
-  transition: .5s;
-  width: 300px;
-  height: 400px;
+    position: absolute;
+    margin-top: 70px;
+    transition: .5s;
+    width: 300px;
+    height: 400px;
 }
 
 .buttonsForm {
-  margin-top: 30px;
-  position: relative;
-  border-radius: 30px;
-  
+    margin-top: 30px;
+    position: relative;
+    border-radius: 30px;
 }
 
 .buttonsForm button {
-  cursor: pointer;
-  background: transparent;
-  border: none;
-  position: relative;
-  padding: 10px 29px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    position: relative;
+    padding: 10px 29px;
 }
 
 .btnColor {
-  position: absolute;
-  width: 108px;
-  height: 100%;
-  background: linear-gradient(to right, red, #db5757);
-  border-radius: 30px;
-  transition: .3s;
-  
+    position: absolute;
+    width: 108px;
+    height: 100%;
+    background: linear-gradient(to right, red, #db5757);
+    border-radius: 30px;
+    transition: .3s;
 }
 
-
 .logbody input[type="text"], .logbody input[type="password"] {
-  border: none;
-  margin-top: 40px;
-  border-radius: 60px;
-  padding: 8px 0 8px 35px;
-  outline: none;
-  width: 100%;
+    border: none;
+    margin-top: 40px;
+    border-radius: 60px;
+    padding: 8px 0 8px 35px;
+    outline: none;
+    width: 100%;
 }
 
 button[type="submit"] {
-  background: red;
-  color: white;
-  border-radius: 30px;
-  width: 100%;
-  border: none;
-  outline: none;
-  padding: 8px 0 8px 15px;
-  font-size: 15px;
-  margin-top: 40px;
-  cursor: pointer;
+    background: red;
+    color: white;
+    border-radius: 30px;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 8px 0 8px 15px;
+    font-size: 15px;
+    margin-top: 40px;
+    cursor: pointer;
 }
 
 .divCheck {
-  margin: 10px 0 0 5px;
-  width: 80%;
-  font-size: 13px;
+    margin: 10px 0 0 5px;
+    width: 80%;
+    font-size: 13px;
 }
 
 #signin {
-  left: 25px;
+    left: 25px;
 }
 
 #signup {
-  left: 450px;
+    left: 450px;
 }
-
 
 .logbody i {
     position: absolute;
     left: 0;
     padding: 10px 10px;
 }
+
 .iEmail {
-  top: 40px;
+    top: 40px;
 }
 
 .iPassword {
-  top: 114px;
+    top: 114px;
 }
 
 .iPassword2 {
-  top: 190px;
+    top: 190px;
 }
 
 @media screen and (max-width: 576px) {
@@ -652,35 +644,37 @@ button[type="submit"] {
     .img-mobile {
         display: block;
     }
+
     section.slider {
         margin-left: auto;
         margin-right: auto;
         max-width: 90%;
         border-radius: 20px;
     }
-    
+
     .homeheader{
         margin-left: 25px;
     }
+
     .homebody{
         max-height: 100vh;
-        
     }
+
     /* Ajustando a margem superior para os botões de navegação */
     .nav-auto,
     .nav-manual {
         margin-top: 60%;
-        
-        
     }
+
     .auto-btn3, .auto-btn2, .auto-btn1, .manual-btn{
         margin-right: 5%;
     }
+
     .services h2 {
         margin-top: 20%;
         text-align: center;
     }
-    
+
     .features {
         display: flex; /* Exibe os itens em linha */
         flex-wrap: wrap; /* Permite que os itens sejam quebrados em várias linhas */
@@ -692,22 +686,28 @@ button[type="submit"] {
         width: 22%; /* Aproximadamente 1/4 da largura do contêiner, com margem para espaçamento */
         margin-bottom: 10px; /* Espaçamento inferior entre os itens */
     }
+
     .search-container {
         margin-top: 2.7%;
         margin-left: 2%;
     }
+
     .search-input:focus {
         width: 200px;
         box-shadow: 2px 2px 5px #777;
     }
+
     #sidebar{
         display: none;
     }
+
     .navegacao{
         display: flex;
         position: fixed;
         bottom: 0;
         width: 100%; /* Para garantir que a navegação ocupe toda a largura da tela */
+        background-color: #fff; /* Adicione um fundo para garantir que o conteúdo abaixo não seja visível */
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Opcional: Adicione uma sombra para destacar a navegação */
         background-color: #fff; /* Adicione um fundo para garantir que o conteúdo abaixo não seja visível */
         box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Opcional: Adicione uma sombra para destacar a navegação */
         z-index: 1000; /* Para garantir que a navegação fique acima de outros elementos */
