@@ -271,7 +271,7 @@ hr{
 
 /* Estilizando a seção do slider */
 section.slider {
-    margin-left: 9%;
+    margin-left: 8.5%;
     width: 90%;
     height: auto;
     padding: 0 !important;
@@ -650,15 +650,18 @@ button[type="submit"] {
     .img-mobile {
         display: block;
     }
-    section.slider {
-        margin-left: 5%;
-    }
     .main {
         padding: 20px;
         z-index: 1;
         padding-left: calc(82px + 20px);
-
     }
+    section.slider {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 90%;
+        border-radius: 20px;
+    }
+    
     .homeheader{
         margin-left: 25px;
     }
@@ -670,6 +673,7 @@ button[type="submit"] {
     .nav-auto,
     .nav-manual {
         margin-top: 60%;
+        
         
     }
     .auto-btn3, .auto-btn2, .auto-btn1, .manual-btn{
