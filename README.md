@@ -15,4 +15,4 @@ Gestão de Rotinas: Organize os treinos em rotinas diárias, semanais ou mensais
 Recomendações Personalizadas: Sugestões de treinos baseadas nos objetivos e preferências do usuário ou pre- organizados por um personal da academia.
 
 ### Tecnologias Utilizadas
-Frontend: HTML, CSS, JavaScript
+Frontend: HTML, CSS, JavaScript, php e umas API
