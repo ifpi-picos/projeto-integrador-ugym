@@ -207,7 +207,7 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     font-size: 14px;
-    transition: width .6s;
+    transition: width .6s ease;
     height: 0px;
 }
 
@@ -594,6 +594,16 @@ button[type="submit"] {
         top: 190px;
     }
     
+    .navegacao ul li{
+        font-size: 1.2em;
+    }
+    .navegacao ul li i{
+        font-size: 2em;
+
+    }
+    
+    
+    
 }
 
 
@@ -699,6 +709,12 @@ button[type="submit"] {
     .iPassword2 {
         top: 190px;
     }
-    
+    .navegacao ul li{
+        font-size: 1.1em;
+    }
+    .navegacao ul li i{
+        font-size: 1.4em;
+
+    }
 }
 
