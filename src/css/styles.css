@@ -10,7 +10,8 @@
 .homebody {
     display: flex;
     min-height: 100vh;
-    background-color: #e3e9f7;
+    background-color: white;
+
 }
 
 .homemain {
