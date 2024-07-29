@@ -509,6 +509,93 @@ button[type="submit"] {
 }
 
 
+@media screen and (max-width: 800px) {
+    .geralsidebar{
+        display: none;
+    }
+    .homemain {
+        padding: 20px;
+        padding-left: 20px;
+        position: fixed;
+        z-index: 1;
+        
+    }
+    .homeheader{
+        display: flex;
+        width: 100%;
+        height: 70px;
+    }
+    .homeheader h1{
+        padding-left: 30px;
+        justify-content: center;
+        align-items: center;
+    }
+    .navegacao{
+        display: flex;
+    }
+
+    .img-desktop{
+        display: none;
+    }
+
+    .img-mobile{
+        display: block;
+    }
+
+    
+    section.slider{
+        height: 400px;
+    }
+    .homemain{
+        padding-left: 20px;
+        
+    }
+    .nav-manual .manual-btn, .nav-auto div{
+        margin-right: 20px;
+        margin-top: 25%;
+        height: 2em;
+        width: 2em;
+    }
+    .services{
+        padding-top: 40px;
+    }
+    .feature{
+        height: 100px;
+        width: 100px;
+    }
+     
+  .logcontainer {
+    width: 300px;
+    height: 450px;
+    }
+    
+    form {
+        width: 250px;
+        height: 400px;
+    }
+    
+    .logbody input[type="text"], .logbody input[type="password"] {
+        padding: 8px 0 8px 30px;
+    }
+    
+    button[type="submit"] {
+        padding: 8px 0 8px 10px;
+    }
+    
+    .iEmail {
+        top: 40px;
+    }
+    
+    .iPassword {
+        top: 114px;
+    }
+    
+    .iPassword2 {
+        top: 190px;
+    }
+    
+}
+
 
 
 
@@ -576,7 +663,11 @@ button[type="submit"] {
         margin-top: 25%;
     }
     .services{
-        padding-top: 50px;
+        padding-top: 25px;
+    }
+    .feature{
+        height: 90px;
+        width: 90px;
     }
      
   .logcontainer {
