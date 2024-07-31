@@ -20,14 +20,14 @@
     z-index: 1;
     padding-left: calc(82px + 20px);
 }
-.homeheader{
+.geralheader{
     display: flex;
 }
-.homeheader h1{
+.geralheader h1{
     padding: 20px;
     font-size: 3em;
 }
-.homeheader span, .services span{
+.geralheader span, .services span{
     color: red;
 }
 /*services*/
@@ -520,12 +520,12 @@ button[type="submit"] {
         z-index: 1;
         
     }
-    .homeheader{
+    .geralheader{
         display: flex;
         width: 100%;
         height: 70px;
     }
-    .homeheader h1{
+    .geralheader h1{
         padding-left: 30px;
         justify-content: center;
         align-items: center;
@@ -638,12 +638,12 @@ button[type="submit"] {
         z-index: 1;
         
     }
-    .homeheader{
+    .geralheader{
         display: flex;
         width: 100%;
         height: 70px;
     }
-    .homeheader h1{
+    .geralheader h1{
         padding-left: 30px;
         justify-content: center;
         align-items: center;
