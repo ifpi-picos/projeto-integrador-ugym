@@ -4,7 +4,7 @@
   "theme_color": "#fff",
   "background_color": "#fff",
   "display": "standalone",
-  "orientation": "portrait",
+  "orientation": "",
   "scope": "/projeto-integrador-ugym",
   "start_url": "/projeto-integrador-ugym/index.html",
   "icons": [
