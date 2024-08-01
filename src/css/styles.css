@@ -22,8 +22,10 @@
 }
 .geralheader{
     display: flex;
+    position: fixed;
 }
 .geralheader h1{
+    margin-left: 100px;
     padding: 20px;
     font-size: 3em;
 }
@@ -86,7 +88,7 @@
     background-color: #ffffff;
     height: 100vh;
     border-radius: 0px 18px 18px 0px;
-    position: relative;
+    position: fixed;
     transition: all .5s;
     min-width: 90px;
     z-index: 2;
@@ -508,6 +510,53 @@ button[type="submit"] {
     top: 190px;
 }
 
+/* Profile Styles */
+.perfmain {
+    padding-top: 6%;
+    padding-left: 8%;
+    z-index: 1;
+}
+
+.perfmain img {
+    height: 280px;
+    width: 280px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+.informations {
+    display: flex;
+    padding-top: 40px;
+    gap: 125px;
+}
+
+.informations p {
+    font-size: 1.2em;
+}
+
+.infotop {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    border-radius: 12px;
+}
+
+.essencinfo span {
+    color: red;
+}
+
+.evolution-chart {
+    width: 80%;
+    margin: auto;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    height: 300px;
+    width: 500px;
+    background-color: #fff;
+    padding: 4%;
+}
+
+
 
 @media screen and (max-width: 800px) {
     .geralsidebar{
@@ -524,8 +573,11 @@ button[type="submit"] {
         display: flex;
         width: 100%;
         height: 70px;
+        
+
     }
     .geralheader h1{
+        margin-left: 0;
         padding-left: 30px;
         justify-content: center;
         align-items: center;
@@ -602,30 +654,53 @@ button[type="submit"] {
 
     }
     
+    /*perfil*/
+    .perfbody {
+        overflow-x: scroll;
+    }
     
+    .perfmain {
+        padding-top: 80px;
+        padding-left: 20px;
+        z-index: 1;
+        height: 80vh;
+        height: max-content;
+    }
+    
+    
+    
+    .perfmain img {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        display: flex;
+    }
+    
+    
+    
+    .informations {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .informations p {
+        font-size: 1em;
+    }
+    
+    .informations h2 {
+        font-size: 1.2em;
+    }
+    
+    .evolution-chart {
+        padding: 0px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        height: 300px;
+        width: 95%;
+        background-color: #fff;
+    }
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media screen and (max-width: 576px) {
     .geralsidebar{
@@ -642,6 +717,8 @@ button[type="submit"] {
         display: flex;
         width: 100%;
         height: 70px;
+        position: initial;
+        
     }
     .geralheader h1{
         padding-left: 30px;
@@ -715,6 +792,57 @@ button[type="submit"] {
     .navegacao ul li i{
         font-size: 1.4em;
 
+    }
+
+
+    /*perfil*/
+    .perfbody {
+        overflow: scroll;
+    }
+    
+    .perfmain {
+        padding-top: 20px;
+        padding-left: 20px;
+        z-index: 1;
+        height: max-content;
+        overflow: scroll;
+        height: 100vh;
+
+        
+    }
+    
+    
+    
+    .perfmain img {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        display: flex;
+    }
+    
+
+    
+    .informations {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .informations p {
+        font-size: 1em;
+    }
+    
+    .informations h2 {
+        font-size: 1.1em;
+    }
+    
+    .evolution-chart {
+        padding-bottom: 40%;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        
+        height: 140px;
+        width: 95%;
+        background-color: #fff;
     }
 }
 
