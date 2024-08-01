@@ -6,7 +6,7 @@
   "display": "standalone",
   "orientation": "portrait",
   "scope": "/projeto-integrador-ugym",
-  "start_url": "/projeto-integrador-ugym/home.html?singinemail=dsds&singinsenha=dsds",
+  "start_url": "/projeto-integrador-ugym/",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
