@@ -1,4 +1,3 @@
-
 const meses = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"];
 const altura = [1.80, 1.80, 1.80, 1.80, 1.80, 1.80];  // Altura constante
 const peso = [82, 81, 79, 78, 77, 75];  // Peso em kg
@@ -6,31 +5,26 @@ const imc = [25.3, 25.0, 24.4, 24.1, 23.8, 23.1];  // IMC
 
 const ctx = document.getElementById('evolutionChart').getContext('2d');
 const evolutionChart = new Chart(ctx, {
-    type: 'line',
+    type: 'bar',  // Alterado para 'bar'
     data: {
         labels: meses,
         datasets: [
             {
                 label: 'Altura (m)',
                 data: altura,
-                borderColor: 'blue',
-                fill: false,
+                backgroundColor: 'blue',
                 yAxisID: 'y1'
             },
             {
                 label: 'Peso (kg)',
                 data: peso,
-                borderColor: 'red',
-                borderDash: [5, 5],
-                fill: false,
+                backgroundColor: ['red', 'red', 'red', 'red', 'red', 'red'],
                 yAxisID: 'y2'
             },
             {
                 label: 'IMC',
                 data: imc,
-                borderColor: 'green',
-                borderDash: [5, 5],
-                fill: false,
+                backgroundColor: ['green', 'green', 'green', 'green', 'green', 'green'],
                 yAxisID: 'y2'
             }
         ]

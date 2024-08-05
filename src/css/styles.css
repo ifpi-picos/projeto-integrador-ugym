@@ -549,8 +549,8 @@ button[type="submit"] {
     margin: auto;
     background-color: #f9f9f9;
     border-radius: 10px;
-    height: 300px;
-    width: 500px;
+    height: 500px;
+    width: 700px;
     background-color: #fff;
     padding: 4%;
 }
@@ -841,7 +841,7 @@ button[type="submit"] {
     }
     
     .evolution-chart {
-        padding-bottom: 40%;
+        padding-bottom: 60%;
         background-color: #f9f9f9;
         border-radius: 10px;
         
