@@ -396,6 +396,12 @@ section.slider{
 
 /* CAD AND LOGIN!!!  */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
 .logbody {
     width: 100vw;
@@ -415,7 +421,6 @@ section.slider{
 }
 
 .logcontainer {
-    background-color: bl;
     padding: 6px;
     width: 350px;
     height: 470px;
@@ -468,7 +473,7 @@ form {
     width: 100%;
 }
 
-button[type="submit"] {
+button[type="button"] {
     background: red;
     color: white;
     border-radius: 30px;
@@ -506,13 +511,12 @@ button[type="submit"] {
 }
 
 .iPassword {
-    top: 114px;
+    top: 115px;
 }
 
-.iPassword2 {
+#iname{
     top: 190px;
 }
-
 /* Profile Styles */
 .perfmain {
     

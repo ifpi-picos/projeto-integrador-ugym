@@ -1,54 +1,193 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>cadastro-login</title>
-  <link rel="stylesheet" href="src/css/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="manifest" href="manifest.json">
-</head>
-<body class="logbody">
-  <header class="logheader">
-    <img src="src/assets/reddumb.png" alt="">
-    <h1>UGYM</h1>
-    <H3>GYM ORGANIZER</H3>
-  </header>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="src/css/styles.css">
     
-  <div class="logcontainer">
-    <div class="buttonsForm">
-      <div class="btnColor"></div>
-      <button id="btnSignin">Sign in</button>
-      <button id="btnSignup">Sign up</button>
+    <title>home</title>
+</head>
+<body class="homebody">
+    <!-- Sidebar -->
+    <div class="geralsidebar">
+        <nav id="sidebar">
+            <div id="sidebar_content">
+                <!-- User Info -->
+                <div id="user">
+                    <img src="src/assets/avatar.jpg" id="user_avatar" alt="Avatar">
+                    <p id="user_infos">
+                        <span class="item-description">''Nome do Usuário''</span>
+                        <span class="item-description">Lorem Ipsum</span>
+                    </p>
+                </div>
+                <!-- Sidebar Items -->
+                <ul id="side_items">
+                    <li class="side-item">
+                        <a href="https://ifpi-picos.github.io/projeto-integrador-ugym/perf.html">
+                            <i class="fa-solid fa-user"></i>
+                            <span class="item-description">Usuários</span>
+                        </a>
+                    </li>
+                    <li class="side-item active">
+                        <a href="https://ifpi-picos.github.io/projeto-integrador-ugym/index.html">
+                            <i class="fa-solid fa-home"></i>
+                            <span class="item-description">home</span>
+                        </a>
+                    </li>
+                    <li class="side-item">
+                        <a href="#">
+                            <i class="fa-solid fa-bell"></i>
+                            <span class="item-description">Notificações</span>
+                        </a>
+                    </li>
+                    <li class="side-item">
+                        <a href="#">
+                            <i class="fa-solid fa-chart-line"></i>
+                            <span class="item-description">Evolução física</span>
+                        </a>
+                    </li>
+                    <li class="side-item">
+                        <a href="#">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span class="item-description">Carrinho</span>
+                        </a>
+                    </li>
+                    <li class="side-item">
+                        <a href="#">
+                            <i class="fa-solid fa-gear"></i>
+                            <span class="item-description">Configurações</span>
+                        </a>
+                    </li>
+                </ul>
+                <!-- Sidebar Toggle Button -->
+                <button id="open_btn">
+                    <i id="open_btn_icon" class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+            <!-- Logout Button -->
+            <div id="logout">
+                <button id="logout_btn" onclick="window.location.href='https://ifpi-picos.github.io/projeto-integrador-ugym/'">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span class="item-description">Logout</span>
+                </button>
+            </div>
+        </nav>
     </div>
 
-    <form id="signin" action="https://ifpi-picos.github.io/projeto-integrador-ugym/home.html">
-      <input name="singinemail" type="text" placeholder="Email" required />
-      <i class="fas fa-envelope iEmail"></i>
-      <input name="singinsenha" type="password" placeholder="Senha" required />
-      <i class="fas fa-lock iPassword"></i>
-      <div class="divCheck">
-        <input type="checkbox" />
-        <span>lembre- se de mim</span>
-      </div>
-      <button type="submit">Sign in</button>
-    </form>
+    <!-- Bottom Navigation Bar -->
+    <div class="downbar">
+        <div class="navegacao">
+            <ul>
+                <li class="lista">
+                    <a href="https://ifpi-picos.github.io/projeto-integrador-ugym/perf.html">
+                        <span class="icone"><i class="bi bi-person-fill"></i></span>
+                        <span class="texto">Perfil</span>
+                    </a>
+                </li>
+                <li class="lista">
+                    <a href="#">
+                        <span class="icone"><i class="bi bi-cart-fill"></i></span>
+                        <span class="texto">Carrinho</span>
+                    </a>
+                </li>
+                <li class="lista ativo">
+                    <a href="https://ifpi-picos.github.io/projeto-integrador-ugym/index.html">
+                        <span class="icone"><i class="bi bi-house-door-fill"></i></span>
+                        <span class="texto">home</span>
+                    </a>
+                </li>
+                <li class="lista">
+                    <a href="#">
+                        <span class="icone"><i class="fa-solid fa-chart-line"></i></span>
+                        <span class="texto">Evolução</span>
+                    </a>
+                </li>
+                <li class="lista">
+                    <a href="#">
+                        <span class="icone"><i class="fa-solid fa-gear"></i></span>
+                        <span class="texto">Config.</span>
+                    </a>
+                </li>
+                <div class="indicador"></div>
+            </ul>
+        </div>
+    </div>
 
-    <form id="signup" action="https://ifpi-picos.github.io/projeto-integrador-ugym/home.html">
-      <input name="singupemail" type="text" placeholder="Email" required />
-      <i class="fas fa-envelope iEmail"></i>
-      <input name="singupesenha1" type="password" placeholder="Senha" required />
-      <i class="fas fa-lock iPassword"></i>
-      <input name="singupsenharepeat" type="password" placeholder="Repita sua senha" required />
-      <i class="fas fa-lock iPassword2"></i>
-      <div class="divCheck">
-        <input type="checkbox" required />
-        <span>Eu aceito todos os termos de serviço</span>
-      </div>
-      <button type="submit">Sign up</button>
-    </form>
-  </div>
-  <script src="src/javascript/scriptcadlog.js"></script>
+    <!-- Header -->
+    <header class="geralheader">
+        <h1><span><i class="fa-solid fa-dumbbell"></i> U</span>GYM</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main class="homemain">
+        <!-- Slider Section -->
+        <section class="slider">
+            <div class="slider-content">
+                <!-- Radio Buttons for Slider Navigation -->
+                <input type="radio" name="btn-radio" id="radio1">
+                <input type="radio" name="btn-radio" id="radio2">
+                <input type="radio" name="btn-radio" id="radio3">
+                
+                <!-- Slide Boxes -->
+                <div class="slide-box primeiro">
+                    <img class="img-desktop" src="src/assets/slide-1.jpg" alt="slide 1">
+                    <img class="img-mobile" src="src/assets/slide-1-mob.jpg" alt="slide 1">
+                </div>
+                <div class="slide-box">
+                    <img class="img-desktop" src="src/assets/slide-2.jpg" alt="slide 2">
+                    <img class="img-mobile" src="src/assets/slide-2-mob.jpg" alt="slide 2">
+                </div>
+                <div class="slide-box">
+                    <img class="img-desktop" src="src/assets/slide-3.jpg" alt="slide 3">
+                    <img class="img-mobile" src="src/assets/slide-3-mob.jpg" alt="slide 3">
+                </div>
+                
+                <!-- Automatic Navigation Buttons -->
+                <div class="nav-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                </div>
+                
+                <!-- Manual Navigation Buttons -->
+                <div class="nav-manual">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services">
+            <h2>Nossos <span>Serviços</span></h2>
+            <hr>
+            <div class="features">
+                <div class="feature">
+                    <i class="fa-solid fa-dumbbell"></i>
+                </div>
+                <div class="feature">
+                    <i class="fa-regular fa-calendar-days"></i>
+                </div>
+                <div class="feature">
+                    <i class="fa-solid fa-carrot"></i>
+                </div>
+                <div class="feature">
+                    <i class="fa-solid fa-store"></i>
+                </div>
+                <div class="feature">
+                    <i class="fa-solid fa-trophy"></i>
+                </div>
+                <div class="feature">
+                    <i class="fa-solid fa-bowl-food"></i>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="src/javascript/scriptnav.js"></script>
+    <script src="src/javascript/scriptslider.js"></script>
 </body>
 </html>
