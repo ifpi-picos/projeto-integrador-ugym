@@ -3,7 +3,7 @@ const URL_API = location.hostname === "localhost" || location.hostname === "127.
 
 
 if(localStorage.getItem("token")){
-  window.location.href = "index.html"
+  window.location.href = "crud.html"
 }
 
 function cadastro(){
