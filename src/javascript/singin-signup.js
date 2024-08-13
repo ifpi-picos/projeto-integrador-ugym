@@ -4,9 +4,7 @@ const URL_API = location.hostname === "localhost" || location.hostname === "127.
 
 if(localStorage.getItem("token")){
   window.location.href = "index.html";
-} else {
-  window.location.href = "crud.html";
-}
+} 
 
 function cadastro(){
 const emailInput = document.querySelector("#singupemail")
@@ -61,7 +59,8 @@ function login() {
       localStorage.setItem("token", token);
       localStorage.setItem("user", JSON.stringify(json.data.user));
       alert("Login successful!");
-      window.location.href = "home.html";
+
+      window.location.href = "index.html";
     })
     .catch(error => {
       console.log(error);
