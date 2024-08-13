@@ -17,3 +17,10 @@ function ativaLink(){
 for(let i of lista){
     i.addEventListener('click', ativaLink)
 }
+
+function logout(){
+const logout = document.querySelector('#logout')
+localStorage.removeItem('token')
+window.location.href="https://ifpi-picos.github.io/projeto-integrador-ugym/crud.html"
+
+}
