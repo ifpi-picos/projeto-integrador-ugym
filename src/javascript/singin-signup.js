@@ -17,7 +17,7 @@ const nameInput = document.querySelector("#singupname")
     name: nameInput.value
   }
 
-  fetch(`${URL_API}/users`, {
+  fetch(`${URL_API}/signup`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
