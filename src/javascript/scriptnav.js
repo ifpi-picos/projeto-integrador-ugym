@@ -24,3 +24,8 @@ localStorage.removeItem('token')
 window.location.href="https://ifpi-picos.github.io/projeto-integrador-ugym/crud.html"
 
 }
+
+function remove(){
+        const activeItem = document.querySelector('.side-item.active');
+        activeItem.remove();
+}

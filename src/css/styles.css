@@ -80,6 +80,9 @@
     color: white;
     transition: 1.3s;
 }
+.feature a {
+    text-decoration: none;
+}
 
 
 
