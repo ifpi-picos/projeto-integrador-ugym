@@ -16,10 +16,9 @@
             <div id="sidebar_content">
                 <!-- User Info -->
                 <div id="user">
-                    <img src="src/assets/avatar.jpg" id="user_avatar" alt="Avatar">
+                    <img id="profile-avatar" src=""  alt="Avatar">
                     <p id="user_infos">
-                        <span class="item-description">''Nome do Usuário''</span>
-                        <span class="item-description">Lorem Ipsum</span>
+                        <span class="item-description" id="profile-name"></span>
                     </p>
                 </div>
                 <!-- Sidebar Items -->
@@ -27,7 +26,7 @@
                     <li class="side-item active">
                         <a href="https://ifpi-picos.github.io/projeto-integrador-ugym/perf.html">
                             <i class="fa-solid fa-user"></i>
-                            <span class="item-description">Usuários</span>
+                            <span class="item-description">Meu perfil</span>
                         </a>
                     </li>
                     <li class="side-item">
@@ -121,60 +120,57 @@
             <h1><span><i class="fa-solid fa-dumbbell"></i> U</span>GYM</h1>
         </header>
         <main class="perfmain">
-                <div class="essencinfo">
-                    <h2>Olá, ''<span>Nome do Usuário</span>''</h2>
-                    <img src="src/assets/avatar.jpg" alt="">
+            <div class="essencinfo">
+                <h2>Olá, ''<span id="profile-name"></span>''</h2>
+                <img id="profile-avatar" src=""  alt="">
+            </div>
+            <div class="informations">
+                <!-- Primary Information -->
+                <div class="infotop">
+                    <div class="priminfo">
+                        <div class="info">
+                            <h2>&middot Altura <i class="fa-solid fa-ruler-vertical"></i></h2>
+                            <p id="profile-height">Não informado</p>
+                        </div>
+                        <div class="info">
+                            <h2>&middot Peso <i class="fa-solid fa-scale-balanced"></i></h2>
+                            <p id="profile-weight">Não informado</p>
+                        </div>
+                        <div class="info">
+                            <h2>&middot IMC <i class="fa-solid fa-percent"></i></h2>
+                            <p id="profile-imc">Não informado</p>
+                        </div>
+                        
+                    </div>
+                    <!-- Secondary Information -->
+                    <div class="secinfo">
+                        <div class="info">
+                            <h2>&middot Doenças crônicas <i class="fa-solid fa-disease"></i></h2>
+                            <p id="profile-disease">Não informado</p>
+                        </div>
+                        <div class="info">
+                            <h2>&middot Necessidades Especiais <i class="fa-solid fa-brain"></i></h2>
+                            <p id="profile-special-condition">Não informado</p>
+                        </div>
+                        <div class="info">
+                            <h2>&middot Meta <i class="fa-solid fa-bullseye"></i></h2>
+                            <p id="profile-meta">Não informado</p>
+                        </div>
                     
+                    </div>
                 </div>
-                <div class="informations">
-                    <!-- Primary Information -->
-                     <div class="infotop">
-                        <div class="priminfo">
-                            <div class="info">
-                                <h2>&middot Altura <i class="fa-solid fa-ruler-vertical"></i></h2>
-                                <p>1,80m</p>
-                            </div>
-                            <div class="info">
-                                <h2>&middot Peso <i class="fa-solid fa-scale-balanced"></i></h2>
-                                <p>80kg</p>
-                            </div>
-                            <div class="info">
-                                <h2>&middot IMC <i class="fa-solid fa-percent"></i></h2>
-                                <p>24,69</p>
-                            </div>
-                            <div class="info">
-                                <h2>&middot Meta <i class="fa-solid fa-bullseye"></i></h2>
-                                <p>75kg</p>
-                            </div>
-                        </div>
-                        <!-- Secondary Information -->
-                        <div class="secinfo">
-                            <div class="info">
-                                <h2>&middot Doenças cronicas  <i class="fa-solid fa-disease"></i></h2>
-                                <p>Diabetes</p>
-                            </div>
-                            <div class="info">
-                                <h2>&middot Necessidades Especiais <i class="fa-solid fa-brain"></i></h2>
-                                <p>Nenhuma</p>
-                            </div>
-                            <div class="info">
-                                <h2>&middot Objetivo <i class="fa-solid fa-arrow-up-right-dots"></i></h2>
-                                <p>Perder peso</p>
-                            </div>
-    
-                        </div>
-                     </div>
-                    
-                    <section class="evolution-chart">
-                        <h2>Evolução Física</h2>
-                        <canvas id="evolutionChart"></canvas>
-                    </section>
 
-                </div>
+                <section class="evolution-chart">
+                    <h2>Evolução Física</h2>
+                    <canvas id="evolutionChart"></canvas>
+                </section>
+            </div>
         </main>
     </div>
-    <script src="src/javascript/scriptnav.js"></script>
-    <script src="src/javascript/scriptgraf.js"></script>
+    <script src="src/javascript/scriptnav.js"></script> <!-- script para barra de navegação -->
+    <script src="src/javascript/scriptgraf.js"></script> <!-- script para gráfico -->
+    <script src="src/javascript/scriptaskreturninfo.js"></script> <!-- script para perfil -->
+    <script src="src/javascript/scriptaskreturninfo.js"></script> <!-- script para perfil -->  
 </body>
 </html>
 

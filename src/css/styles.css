@@ -111,7 +111,7 @@
     margin-bottom: 24px;
 }
 
-#user_avatar {
+#user #profile-avatar {
     width: 50px;
     height: 50px;
     object-fit: cover;
@@ -709,7 +709,7 @@ input[type="text"], input[type="number"], input[type="tel"], input[type="date"] 
     color: #333;
 }
 
-input[type="text"]:focus, input[type="number"]:focus, input[type="tel"]:focus, input[type="date"]:focus {
+input[type="text"]:focus, input[type="number"]:focus, input[type="tel"]:focus, input[type="date"]:focus, input[type="password"]:focus {
     border-bottom: 2px solid #ff4a53;
     outline: none;
 }
@@ -1251,7 +1251,8 @@ input#file-upload-button {
     }
     .exerciciesmain{
         width: 90%;
-        margin-top: 30%;
+        margin: 30%;
+        
     }
     .muscle-selector{
         gap: 10px;
