@@ -21,7 +21,7 @@ for(let i of lista){
 function logout(){
 const logout = document.querySelector('#logout')
 localStorage.removeItem('token')
-window.location.href="https://ifpi-picos.github.io/projeto-integrador-ugym/crud.html"
+window.location.href="https://ifpi-picos.github.io/projeto-integrador-ugym/index.html"
 
 }
 
