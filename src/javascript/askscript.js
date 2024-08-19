@@ -1,16 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Obtém todos os elementos dos passos do formulário e armazena em um array
     const steps = Array.from(document.querySelectorAll('.ask-form-step'));
+    // Obtém todos os botões de continuação do formulário
     const continueButtons = document.querySelectorAll('.ask-continue-button');
+    // Obtém o botão de voltar
     const backButton = document.querySelector('.ask-back-button');
+    // Obtém todos os passos da barra de progresso
     const progressBarSteps = document.querySelectorAll('.ask-progress-bar .ask-step');
     
-    let currentStep = 0;
+    let currentStep = 0; // Armazena o índice do passo atual
+    // Obtém as respostas salvas do localStorage ou inicializa um objeto vazio
     let responses = JSON.parse(localStorage.getItem('userResponses')) || {};
 
+    // Função para mostrar um passo específico do formulário
     function showStep(index, isNext) {
         const currentFormStep = steps[currentStep];
         const nextFormStep = steps[index];
 
+        // Adiciona animação de transição entre passos
         currentFormStep.style.opacity = '0';
         currentFormStep.style.transform = isNext ? 'translateX(-100%)' : 'translateX(100%)';
         backButton.style.opacity = '0';
@@ -25,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
             nextFormStep.style.transform = 'translateX(0)';
             progressBarSteps[index].classList.add('active');
 
+            // Mostra o botão de voltar se não estiver no primeiro passo
             if (index > 0) {
                 backButton.classList.add('active');
                 setTimeout(() => {
@@ -35,20 +43,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 backButton.classList.remove('active');
             }
 
-            currentStep = index;
+            currentStep = index; // Atualiza o passo atual
         }, 500);
     }
 
+    // Função para salvar as respostas do formulário
     function saveResponses() {
         const currentStepElement = steps[currentStep];
         
+        // Salva as respostas com base no passo atual
         if (currentStep === 0) { // Etapa 1: Nome
             const signupName = currentStepElement.querySelector('input#singupname').value;
-            const signuplastname= currentStepElement.querySelector('input#singuplastname').value;
             responses.signupName = signupName;
-            responses.signuplastname = signuplastname;
         } else if (currentStep === 1) { // Etapa 2: Meta
-            const meta = Array.from(currentStepElement.querySelectorAll('.ask-option-button.selected')).map(btn => btn.textContent).join(', ');
+            const meta = currentStepElement.querySelector('input[placeholder="Digite sua meta"]').value;
             responses.meta = meta;
         } else if (currentStep === 2) { // Etapa 3: Peso e Altura
             const weight = currentStepElement.querySelector('input[placeholder="Insira seu peso"]').value;
@@ -85,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const imageUrl = e.target.result;
                     responses.profileImage = imageUrl;
                     localStorage.setItem('userResponses', JSON.stringify(responses));
-                    // Atualize a visualização da imagem de perfil
+                    // Atualiza a visualização da imagem de perfil
                     const profileAvatar = document.getElementById('profile-avatar');
                     if (profileAvatar) {
                         profileAvatar.src = imageUrl;
@@ -98,59 +106,90 @@ document.addEventListener('DOMContentLoaded', () => {
                 localStorage.setItem('userResponses', JSON.stringify(responses));
             }
         }
-        
+
         // Salva as respostas no localStorage
         localStorage.setItem('userResponses', JSON.stringify(responses));
     }
 
+    // Função para submeter o formulário
+    function submitForm() {
+        // Certifique-se de que todas as etapas foram concluídas e as respostas foram salvas
+        saveResponses();
+
+        // Envia os dados para o servidor
+        fetch(`${URL_API}/users/me`, { // Atualize a URL conforme necessário
+            method: "PUT", // Ou POST se estiver criando um novo usuário
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${yourAuthToken}` // Inclua o token de autenticação se necessário
+            },
+            body: JSON.stringify(responses)
+        })
+        .then(response => response.json()) // Converte a resposta para JSON
+        .then(data => {
+            console.log(data); // Exibe os dados recebidos no console
+            alert("Informações atualizadas com sucesso!"); // Exibe uma mensagem de sucesso
+            window.location.href = "https://ifpi-picos.github.io/projeto-integrador-ugym/perf.html"; // Redireciona para a página de perfil
+        })
+        .catch(error => {
+            console.error("Erro ao atualizar informações:", error); // Exibe o erro no console
+            alert("Erro ao atualizar informações!"); // Exibe uma mensagem de erro
+        });
+    }
+
+    // Adiciona eventos de clique aos botões de continuação
     continueButtons.forEach(button => {
         button.addEventListener('click', () => {
-            saveResponses();
+            saveResponses(); // Salva as respostas antes de mudar de etapa
             if (currentStep < steps.length - 1) {
-                showStep(currentStep + 1, true);
+                showStep(currentStep + 1, true); // Mostra o próximo passo
+            } else {
+                // Se for a última etapa, submete o formulário
+                submitForm();
             }
         });
     });
 
+    // Adiciona evento de clique ao botão de voltar
     backButton.addEventListener('click', () => {
         if (currentStep > 0) {
-            showStep(currentStep - 1, false);
+            showStep(currentStep - 1, false); // Mostra o passo anterior
         }
     });
 
+    // Adiciona eventos de clique aos botões de opção
     const optionButtons = document.querySelectorAll(".ask-option-button");
-    let selectedOption = null;
-
     optionButtons.forEach(button => {
         button.addEventListener("click", () => {
-            optionButtons.forEach(btn => btn.classList.remove("selected"));
-            button.classList.add("selected");
-            selectedOption = button.textContent;
+            optionButtons.forEach(btn => btn.classList.remove("selected")); // Remove a seleção de todas as opções
+            button.classList.add("selected"); // Adiciona a seleção ao botão clicado
         });
     });
 });
 
-
-
+// Função para levar o usuário para a próxima página, no caso a de perfil
 function proxpage() {
     window.location.href = "https://ifpi-picos.github.io/projeto-integrador-ugym/perf.html";
 }
 
+// Função para mostrar o input de doença
 function showInput() {
     const input = document.getElementById('disease-input');
-    input.style.display = 'block';
+    input.style.display = 'block'; // Torna o input visível
 }
 
+// Função para ocultar o input de doença
 function hideInput() {
     const input = document.getElementById('disease-input');
-    input.style.display = 'none';
+    input.style.display = 'none'; // Torna o input invisível
 }
 
+// Função para manipular a mudança de opções e exibir ou ocultar inputs
 function handleOptionChange(option, inputId) {
     const inputElement = document.getElementById(inputId);
     if (option === 'Sim') {
-        inputElement.style.display = 'block';
+        inputElement.style.display = 'block'; // Torna o input visível se a opção for 'Sim'
     } else {
-        inputElement.style.display = 'none';
+        inputElement.style.display = 'none'; // Torna o input invisível se a opção não for 'Sim'
     }
 }

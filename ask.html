@@ -30,17 +30,17 @@
             </div>
 
             <div class="ask-form-step active">
-                <input type="text" name="singupname" id="singupname" placeholder="Digite seu primeiro nome">
-                <input type="text" name="singuplastname" id="singuplastname" placeholder="Digite seu sobrenome">
+                <h2>Como devemos te chamar?</h2>
+                <input type="text" name="singupname" id="singupname" placeholder="Digite como devemos te chamar dentro do app">
                 <button class="ask-continue-button">Continuar</button>
             </div>
 
             <!-- Etapa 1 -->
-            <div class="ask-form-step ">
-                <h2>Qual a sua meta?</h2>
-                <button class="ask-option-button">Definição e emagrecimento</button>
-                <button class="ask-option-button">Aumento de Força</button>
-                <button class="ask-option-button">Aumento de massa magra muscular</button>
+            <div class="ask-form-step">
+                <h2>Você tem alguma meta específica?</h2>
+                <button class="ask-option-button" onclick="handleOptionChange('Sim', 'goal-input')">Sim</button>
+                <button class="ask-option-button" onclick="handleOptionChange('Não', 'goal-input')">Não</button>
+                <input type="text" id="goal-input" placeholder="Digite sua meta" style="display: none;">
                 <button class="ask-continue-button">Continuar</button>
             </div>
             
@@ -129,6 +129,6 @@
         </div>
     </main>
 
-    <script src="src/javascript/askscript.js" ></script>
+<script src="src/javascript/askscript.js"></script>
 </body>
 </html>

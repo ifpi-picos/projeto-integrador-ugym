@@ -613,7 +613,7 @@ button[type="button"] {
 }
 
 .ask-step {
-    width: 20px;
+    width: 30px;
     height: 20px;
     margin: 0 5px;
     background-color: #e0e0e0;
@@ -946,7 +946,63 @@ input#file-upload-button {
 }
 
 
+/*configs*/
+.configsbody {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    height: 100vh;
+    margin: 0;
+}
 
+.configsmain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.configscontainer {
+    width: 350px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.configs-menu-item {
+    background-color: #ddd;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.configs-menu-item:hover {
+    background-color: red;
+}
+
+.configs-menu-item i {
+    margin-right: 10px;
+    color: rgb(202, 52, 52);
+    transition: all 0.5s ease;
+}
+
+.configs-menu-item:hover i {
+    color: #fff;
+}
+
+.app-version {
+    font-size: 12px;
+    color: #999;
+    margin-top: 10px;
+} 
 
 
 @media screen and (max-width: 800px) {
