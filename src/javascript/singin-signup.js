@@ -3,7 +3,7 @@ const URL_API = location.hostname === "localhost" || location.hostname === "127.
 
 
 if(localStorage.getItem("token")){
-  window.location.href = "https://ifpi-picos.github.io/projeto-integrador-ugym/home.html";
+  window.location.href = "home.html";
 } 
 
 
@@ -26,11 +26,14 @@ const nameInput = document.querySelector("#singupname")
     body: JSON.stringify(user)
   })
     .then(response => response.json())
-    .then(data => {
-      console.log(data)
+    .then(json => {
+      const token = json.token;
+      console.log(json)
+      localStorage.setItem("token", token);
+      localStorage.setItem("user", JSON.stringify(json.user));
       alert("Usuário cadastrado com sucesso!")
 
-      window.location.href = "https://ifpi-picos.github.io/projeto-integrador-ugym/ask.html";
+      window.location.href = "ask.html";
     })
     .catch(error => {
       console.log(error)
@@ -58,12 +61,12 @@ function login() {
     // .then(data => {(jesiel mudou para json)
     .then(json => {
       console.log(json); 
-      const token = json.data.token;
+      const token = json.token;
       localStorage.setItem("token", token);
-      localStorage.setItem("user", JSON.stringify(json.data.user));
+      localStorage.setItem("user", JSON.stringify(json.user));
       alert("Login successful!");
 
-      window.location.href = "https://ifpi-picos.github.io/projeto-integrador-ugym/index.html";
+      window.location.href = "index.html";
     })
     .catch(error => {
       console.log(error);
