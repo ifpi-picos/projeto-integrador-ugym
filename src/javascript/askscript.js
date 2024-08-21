@@ -43,17 +43,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 500);
     }
   
-    const nextButton = document.querySelectorAll(".ask-continue-button");
-  
-    nextButton.forEach((button) => {
-      button.addEventListener("click", () => {
-        nextStep();
-      // Remove the extra closing curly braces
-    });
-  
     function nextStep() {
       const currentStepElement = steps[currentStep];
-      console.log("currentStepElement", currentStepElement);
   
       switch (currentStep) {
         case 0:
@@ -127,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
             };
             reader.readAsDataURL(file);
           } else {
-            user.profileImage = responses.profileImage || "";
+            user.profileImage = user.profileImage || "";
           }
           break;
         default:
@@ -166,6 +157,7 @@ document.addEventListener("DOMContentLoaded", () => {
     continueButtons.forEach((button) => {
       button.addEventListener("click", () => {
         if (currentStep < steps.length - 1) {
+          nextStep();
           showStep(currentStep + 1, true);
         } else {
           updateUser(); // Chama updateUser ao final do formulário
@@ -188,35 +180,27 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
   
-  const optionButtons = document.querySelectorAll(".ask-option-button");
-  optionButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      optionButtons.forEach((btn) => btn.classList.remove("selected"));
-      button.classList.add("selected");
-    });
-  });
-});
-
-function proxpage() {
-  window.location.href =
-    "https://ifpi-picos.github.io/projeto-integrador-ugym/perf.html";
-}
-
-function showInput() {
-  const input = document.getElementById("disease-input");
-  input.style.display = "block";
-}
-
-function hideInput() {
-  const input = document.getElementById("disease-input");
-  input.style.display = "none";
-}
-
-function handleOptionChange(option, inputId) {
-  const inputElement = document.getElementById(inputId);
-  if (option === "Sim") {
-    inputElement.style.display = "block";
-  } else {
-    inputElement.style.display = "none";
+  function proxpage() {
+    window.location.href =
+      "https://ifpi-picos.github.io/projeto-integrador-ugym/perf.html";
   }
-}
+  
+  function showInput() {
+    const input = document.getElementById("disease-input");
+    input.style.display = "block";
+  }
+  
+  function hideInput() {
+    const input = document.getElementById("disease-input");
+    input.style.display = "none";
+  }
+  
+  function handleOptionChange(option, inputId) {
+    const inputElement = document.getElementById(inputId);
+    if (option === "Sim") {
+      inputElement.style.display = "block";
+    } else {
+      inputElement.style.display = "none";
+    }
+  }
+  
