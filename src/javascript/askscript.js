@@ -1,3 +1,7 @@
+const URL_API = location.hostname === "localhost" || location.hostname === "127.0.0.1" ? 
+"http://localhost:3000" : "https://ugym-backend.onrender.com";
+
+
 document.addEventListener("DOMContentLoaded", () => {
     const steps = Array.from(document.querySelectorAll(".ask-form-step"));
     const continueButtons = document.querySelectorAll(".ask-continue-button");
