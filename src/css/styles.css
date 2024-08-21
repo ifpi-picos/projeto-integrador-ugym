@@ -659,7 +659,7 @@ button[type="button"] {
     transform: translateY(0);
 }
 
-.ask-continue-button, .updatebutton {
+.ask-continue-button  {
     width: 100%;
     padding: 12px;
     background-color: #ff4a53;
@@ -672,7 +672,23 @@ button[type="button"] {
     transition: background-color 0.3s ease;
 }
 
-.ask-continue-button:hover, .updatebutton:hover {
+.ask-continue-button:hover {
+    background-color: #ff2a33;
+}
+.updatebutton{
+    width: 100%;
+    padding: 12px;
+    background-color: #ff4a53;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+
+}
+.updatebutton:hover {
     background-color: #ff2a33;
 }
 
