@@ -17,13 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('profile-imc').textContent = imc || 'Não informado';
 
         function calculateIMC(weight, height) {
-            // Convert weight from kg to grams
+        
             const weightInGrams = weight * 1000;
-            // Convert height from cm to meters
             const heightInMeters = height / 100;
-            // Calculate the IMC
             const imc = weightInGrams / (heightInMeters * heightInMeters);
-            // Round the IMC to two decimal places
             return imc.toFixed(2);
         }
         document.getElementById('profile-meta').textContent = userResponses.meta || 'Não informado';

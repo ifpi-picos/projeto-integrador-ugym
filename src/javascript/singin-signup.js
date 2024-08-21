@@ -2,9 +2,9 @@ const URL_API = location.hostname === "localhost" || location.hostname === "127.
 "http://localhost:3000" : "https://ugym-backend.onrender.com"
 
 
-/* if(localStorage.getItem("token")){
+if(localStorage.getItem("token")){
   window.location.href = "https://ifpi-picos.github.io/projeto-integrador-ugym/home.html";
-} */
+} 
 
 
 function cadastro(){
