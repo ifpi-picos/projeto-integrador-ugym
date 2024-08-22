@@ -53,8 +53,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     switch (currentStep) {
       case 0:
-        user.signupName =
-          currentStepElement.querySelector("input#singupname").value;
+        user.username =
+          currentStepElement.querySelector("input#username").value;
         break;
       case 1:
         user.meta = currentStepElement.querySelector(
@@ -133,6 +133,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function updateUser() {
+    //transformando em token 
+    //localStorage.setItem('user', JSON.stringify(user));
+    // nao preciso disso! nao faça isso!
     console.log("user:", user);
     fetch(`${URL_API}/users/me`, {
       method: "PUT",
