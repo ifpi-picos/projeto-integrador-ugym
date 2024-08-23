@@ -468,7 +468,7 @@ form {
 }
 
 .logbody input[type="text"], .logbody input[type="password"] {
-    border: none;
+    border: 1px solid black;
     margin-top: 40px;
     border-radius: 60px;
     padding: 8px 0 8px 35px;
