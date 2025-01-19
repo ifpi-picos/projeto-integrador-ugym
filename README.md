@@ -1,19 +1,27 @@
+# U-gym - Gerenciador de Treino
 
+[![React Native](https://img.shields.io/badge/React%20Native-0.72.3-blue)](https://reactnative.dev/)
+[![Expo](https://img.shields.io/badge/Expo-49.0.0-000000)](https://expo.dev/)
+[![License](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
 
+**U-gym** é um aplicativo mobile para ajudar os usuários a gerenciar seus treinos de forma simples e eficiente. Ele foi desenvolvido utilizando **React Native** e **Expo**, garantindo uma experiência multiplataforma e fácil de manter.
 
-# Projeto de Site: UGYM 
-### Descrição
+---
 
-Este projeto é um sistema de gerenciamento de treino e academia que permite aos usuários criar, personalizar e acompanhar seus planos de treino. A plataforma oferece funcionalidades para registrar treinos, monitorar progresso, gerenciar rotinas de exercícios e acessar recomendações de treinos personalizados.
-alem das funcionalidades para academia, como gerenciamento das informações dos alunos, matriculas e etc
+## 🚀 Funcionalidades
 
-### Funcionalidades
-Cadastro de Usuários: Permite que novos usuários se registrem e criem perfis personalizados.
-Criação e Personalização de Treinos: Usuários podem criar e personalizar seus planos de treino, selecionando exercícios, definindo séries, repetições e pesos.
-Monitoramento de Progresso: Acompanhe o progresso dos treinos com gráficos e estatísticas.
-Gestão de Rotinas: Organize os treinos em rotinas diárias, semanais ou mensais.
-Recomendações Personalizadas: Sugestões de treinos baseadas nos objetivos e preferências do usuário ou pre- organizados por um personal da academia.
+- 📅 **Gerenciamento de treinos**: crie, edite e acompanhe seus treinos.
+- 🕒 **Histórico de atividades**: visualize seu progresso ao longo do tempo.
+- 📈 **Estatísticas personalizadas**: gráficos e métricas sobre seu desempenho.
+- 🧑‍💻 **Perfil do usuário**: edite informações pessoais como nome, foto de perfil e objetivos.
+- 🔔 **Notificações**: lembretes para não perder os treinos.
 
-### Tecnologias Utilizadas
-Frontend: HTML, CSS, JavaScript
-backend: bun, prisma, hono, postgredsql, typescript, javascript, banco de dados Neon e render para rodar o backend (antes usava php) 
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- **[React Native](https://reactnative.dev/)**: Framework para desenvolvimento de apps móveis.
+- **[Expo](https://expo.dev/)**: Plataforma para construir, compilar e testar aplicativos React Native.
+- **[React Navigation](https://reactnavigation.org/)**: Navegação entre telas.
+- **[Expo CLI](https://docs.expo.dev/workflow/expo-cli/)**: Ferramenta para gerenciamento do projeto.
+- **[Expo Go](https://expo.dev/client)**: Teste do app diretamente no dispositivo.
